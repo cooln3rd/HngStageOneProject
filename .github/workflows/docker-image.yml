@@ -34,7 +34,7 @@ jobs:
 
       - name: Build Docker Image
         run: |
-         docker build -t ghcr.io/cooln3rd/hngstage:000003 -f NumberClassificationApi/Dockerfile NumberClassificationApi/
+         docker build -t ghcr.io/${{ github.actor }}/hngstage:${{ env.VERSION }} -f NumberClassificationApi/Dockerfile .
 
       - name: Push Docker Image to GHCR
         run: |
